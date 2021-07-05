@@ -1,0 +1,43 @@
+.test-grid{
+    border:solid red;
+    height: 400px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    
+}
+.elem1{
+    border: solid black;
+    grid-column: span 2;
+    grid-row: span 2;
+   
+
+}
+.elem2{
+    border: solid black;
+}
+.elem3{
+    border: solid black;
+    grid-row: span 2;
+}
+.elem4{
+    border: solid black;
+    grid-column: span 2;
+    height: 150px;
+}
+.elem5{
+    border: solid black;
+}
+.elem6{
+    border: solid black;
+}
+
+@media  (max-width:900px) {
+   .elem1{
+      
+        grid-row: span 3;
+        background-color: burlywood;
+        
+    }
+   }
+    
