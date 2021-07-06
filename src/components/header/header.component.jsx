@@ -26,7 +26,7 @@ const Header = () => {
         </div>
         <div className="option">
           {" "}
-          <Link className="options"> SIGN IN</Link>
+          <Link to="/signin" className="options"> SIGN IN</Link>
         </div>
       </div>
     </div>

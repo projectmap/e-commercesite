@@ -1,5 +1,5 @@
 .header{
-    border:solid red;
+  
     height: 70px;
     width: 100%;
     display: flex;
@@ -7,10 +7,11 @@
 }
 
 .logo-holder{
-    border: solid black;
+   
     display: flex;
     align-items: center;
     text-decoration: none;
+    margin-left: 5px;
     width: 100px;
     height: 100%;
     .home{
@@ -21,7 +22,7 @@
 }
 
 .option-holder{
-    border:solid black;
+   
     display: flex;
     justify-content: flex-end;
     align-items: center;
