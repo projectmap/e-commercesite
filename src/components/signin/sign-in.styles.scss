@@ -1,0 +1,36 @@
+.form-layout-outer{
+    width:400px;
+   
+   
+   
+    h3{
+        margin-left: 50px;
+    }
+}
+.form-layout{
+    
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 50px;
+    
+}
+
+.text-field{
+    width: 80%;
+    margin-bottom: 70px;
+
+}
+.button-container{
+   
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+.custom-button{
+    //width: 80px;
+    width:fit-content;
+    height: 25px;
+    margin-top: 50px;
+}
