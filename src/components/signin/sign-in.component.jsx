@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 
+import { signInWithGoogle } from "../../firebase/firebase.utils";
+
 import FormInput from "../forminput/forminput.component";
 import "./sign-in.styles.scss";
 
@@ -29,7 +31,8 @@ const SignIn = () => {
 
 
   const handleSignInWithGoogle=()=>{
-    alert("Your are signing with google.");
+    signInWithGoogle();
+   
   }
 
   return (
