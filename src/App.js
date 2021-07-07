@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useEffect,useState } from 'react';
 import { Switch, Route } from 'react-router-dom';
+
+import {auth } from "./firebase/firebase.utils";
 
 import './App.css';
 import Header from './components/header/header.component';
@@ -14,10 +16,25 @@ const HatsPage = () => (
   </div>
 );
 
+
 function App() {
+
+  const [currentUser,setUser]=useState(null);
+  useEffect(()=>{
+    const unsubscribeFromAuth = auth.onAuthStateChanged((user) => {
+      setUser(user);
+      console.log("current user",currentUser);
+    })
+    return () => {
+      unsubscribeFromAuth();
+    }
+
+  });
+
+
   return (
     <div>
-      <Header/>
+      <Header currentUser={currentUser}/>
       <Switch>
         <Route exact path='/' component={HomePage} />
         <Route path='/hats' component={HatsPage} />
