@@ -21,15 +21,26 @@
     }
 }
 .hide{
-    display: none;
+  //  display: none;
+  opacity: 0;
+    position: absolute;
+    top:40px;
+    right: 50px;
+    transform: translateY(-30px);
+    transition: all 0.3s ease-in-out;
+    z-index: -1;
 }
 
 .menu-signout{
    
+   display: block;
+   opacity: 1;
     position: absolute;
-    top:100px;
+     top:90px;
+   //transform: translateY(30px);
     right: 50px;
-    border:1px solid rgb(168, 164, 164);
+   
+    transition: all 0.3s ease-in-out;
    border-radius: 10px;
     z-index: 100;
 }
@@ -48,6 +59,9 @@
         .arrow-signout{
             cursor:pointer;
             margin-left: 10px;
+            position:absolute;
+            top:50px;
+            right:35px;
             }
             // .arrow-signout:active~.menu-signout{
             //    display: block;
@@ -66,5 +80,6 @@
 
 .arrow-signout-hide{
     display: none;
+
 }
 

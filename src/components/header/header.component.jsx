@@ -17,6 +17,7 @@ const Header = ({ currentUser }) => {
 
   const handleSignOut = () => {
     auth.signOut();
+    console.log("signed out bro");
   };
 
   return (
@@ -41,7 +42,7 @@ const Header = ({ currentUser }) => {
           {currentUser ? (
             <div className="options">
               Hello!
-              <br /> {currentUser.bc.displayName}
+              <br /> {currentUser.displayName}
               <span
                 onClick={() => {
                   setStatus("menu-signout");
