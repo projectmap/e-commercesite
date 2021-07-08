@@ -14,11 +14,14 @@ const useStyles = makeStyles({
     maxWidth: 345,
   },
   menuCardEmail: {
-    fontSize: 10,
+    fontSize: 8,
   },
   menuCardName: {
-    fontSize: 15,
+    fontSize: 12,
   },
+  signoutButton:{
+    fontSize:10,
+  }
 });
 
 const ImgMediaCard = ({ currentUser, handle }) => {
@@ -33,7 +36,7 @@ const ImgMediaCard = ({ currentUser, handle }) => {
   return (
     <div className="sign-out-container">
       <Card className={classes.root}>
-        <CardActionArea>
+        <CardActionArea className="sign-out-container">
           {/* <CardMedia className="photo-holder"
           component="img"
           alt="Your profile"
@@ -52,7 +55,7 @@ const ImgMediaCard = ({ currentUser, handle }) => {
               variant="h6"
               component="h2"
             >
-              {currentUser.bc.displayName}
+              {currentUser.displayName}
             </Typography>
             <Typography
               className={classes.menuCardEmail}
@@ -60,12 +63,12 @@ const ImgMediaCard = ({ currentUser, handle }) => {
               color="textSecondary"
               component="p"
             >
-              {currentUser.bc.email}
+              {currentUser.email}
             </Typography>
           </CardContent>
-        </CardActionArea>
+        </CardActionArea><hr/>
         <CardActions>
-          <Button onClick={handle} size="small" color="primary">
+          <Button className={classes.signoutButton} onClick={handle} size="small" color="primary">
             Sign Out
           </Button>
         </CardActions>
