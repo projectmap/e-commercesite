@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
-
-import { signInWithGoogle } from "../../firebase/firebase.utils";
+import AlertSuccess from "../alert/alert.success";
+import {auth, signInWithGoogle } from "../../firebase/firebase.utils";
 
 import FormInput from "../forminput/forminput.component";
 import "./sign-in.styles.scss";
@@ -12,6 +12,8 @@ const SignIn = () => {
     email: "",
     password: "",
   });
+  const [openAlert, setOpen] = useState(false);
+  //let openAlert="false";
 
   const handleChange = (event) => {
     const field = event.target;
@@ -24,9 +26,25 @@ const SignIn = () => {
     }));
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = async() => {
     console.log(formdata);
-    alert("Your form have been submited.");
+    const {email,password}=formdata; 
+   try{ 
+     await auth.signInWithEmailAndPassword(email,password);
+     setForm({
+       email:"",
+       password:""
+     })
+     setOpen(true);
+     setTimeout(setOpen(false), 2000);
+// openAlert="true"; 
+    //alert("You are logged in.");
+
+   }catch(error){
+console.log(error);
+   }
+   
+   
   };
 
 
@@ -67,7 +85,7 @@ const SignIn = () => {
           variant="contained"
           color="primary"
         >
-          Submit
+         Sign In
         </Button>
         <Button
           className="custom-button"
@@ -80,6 +98,7 @@ const SignIn = () => {
         
         </div>
       </form>
+      <AlertSuccess openAlertBar={openAlert} openBar={setOpen}/>
     </div>
   );
 };

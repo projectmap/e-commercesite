@@ -3,6 +3,7 @@
     height: 50px;
     width: 50px;
     border-radius: 50%;
+    margin-top: 5px;
    margin-left: auto;
    margin-right: auto;
     
@@ -13,4 +14,26 @@
     background-color: rgb(228, 224, 224);
     z-index: 101;
     opacity: 1;
+}
+
+.letter-first{
+   
+    background: #e30066;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    p{
+       
+        width: fit-content;
+        font-size: 30px;
+        color:#e3d5db;
+    }
+    
 }

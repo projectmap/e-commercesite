@@ -42,7 +42,7 @@ const Header = ({ currentUser }) => {
           {currentUser ? (
             <div className="options">
               Hello!
-              <br /> {currentUser.displayName}
+              <br /> {currentUser.displayName.charAt(0).toUpperCase() + currentUser.displayName.slice(1)}
               <span
                 onClick={() => {
                   setStatus("menu-signout");
@@ -59,6 +59,7 @@ const Header = ({ currentUser }) => {
                   setStatus("hide");
                   setCardHide1("arrow-signout");
                   setCardHide2("arrow-signout-hide");
+                  
                   console.log("clicked arrow");
                 }}
                 className={cardHide2}

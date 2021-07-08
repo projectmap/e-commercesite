@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
 import CardActionArea from "@material-ui/core/CardActionArea";
@@ -26,8 +26,13 @@ const useStyles = makeStyles({
 
 const ImgMediaCard = ({ currentUser, handle }) => {
   const classes = useStyles();
-
-  
+  //const [firstLetter,setLetter]=useState(null);
+  let firstLetter="test";
+  if(!currentUser.photoURL){
+     const letter=currentUser.displayName.charAt(0).toUpperCase();
+     //setLetter(letter);
+     firstLetter=letter;
+  }
 
   
 
@@ -43,11 +48,13 @@ const ImgMediaCard = ({ currentUser, handle }) => {
           height="70"
           image={currentUser.photoURL}
           title="Contemplative Reptile"
-        /> */}
-          <div
-            className="photo-holder"
-            style={{ backgroundImage: `url(${currentUser.photoURL})` }}
-          ></div>
+        /> */}{
+          currentUser.photoURL?<div
+          className="photo-holder"
+          style={{ backgroundImage: `url(${currentUser.photoURL})` }}
+        ></div>:<div className="letter-first"><p>{firstLetter}</p></div>
+        }
+          
           <CardContent>
             <Typography
               className={classes.menuCardName}
@@ -55,7 +62,7 @@ const ImgMediaCard = ({ currentUser, handle }) => {
               variant="h6"
               component="h2"
             >
-              {currentUser.displayName}
+              {currentUser.displayName.charAt(0).toUpperCase() + currentUser.displayName.slice(1)}
             </Typography>
             <Typography
               className={classes.menuCardEmail}
