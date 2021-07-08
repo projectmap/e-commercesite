@@ -46,8 +46,8 @@
 }
 
 .option-holder{
-    
-   padding-right: 30px;
+   
+   //padding-right: 30px;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -57,22 +57,33 @@
 
     .options{
         .arrow-signout{
+            display: flex;
+            align-items: flex-end;
             cursor:pointer;
             margin-left: 10px;
-            position:absolute;
-            top:50px;
-            right:35px;
+            // position:absolute;
+            // top:50px;
+            // right:35px;
             }
             // .arrow-signout:active~.menu-signout{
             //    display: block;
             // }
-      
+      display: flex;
+      justify-content: flex-end;
         margin-left: 40px;
         text-decoration: none;
         font-family: sans-serif;
         font-size: 15px;
         text-align: center;
         color: rgb(160, 134, 134);
+        @media(max-width:420px){
+            font-size: 13px;
+            margin-left: 20px;
+        }
+        @media(max-width:370px){
+            font-size: 12px;
+            margin-left: 14px;
+        }
         
     }
 

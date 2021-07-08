@@ -1,4 +1,7 @@
 body {
   font-family: 'Open Sans Condensed';
   padding:20px 30px;
+  /* @media(max-width:510px){
+    padding:0px;
+  } */
 }
