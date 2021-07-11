@@ -4,6 +4,8 @@ import { auth } from "../../firebase/firebase.utils";
 
 import { Link } from "react-router-dom";
 
+import {connect} from "react-redux";
+
 import { ReactComponent as Logo } from "../../assets/crownlogo.svg";
 import "./header.styles.scss";
 import ImgMediaCard from "../signout-menu/signout.menu";
@@ -16,6 +18,9 @@ const Header = ({ currentUser }) => {
   const [cardHide2, setCardHide2] = useState("arrow-signout-hide");
 
   const handleSignOut = () => {
+    setStatus("hide");
+    setCardHide2("arrow-signout-hide");
+    setCardHide1("arrow-signout")
     auth.signOut();
     console.log("signed out bro");
   };
@@ -69,7 +74,7 @@ const Header = ({ currentUser }) => {
               <div className={status}>
                 <ImgMediaCard
                   handle={handleSignOut}
-                  currentUser={currentUser}
+                  
                 />
               </div>
             </div>
@@ -85,4 +90,8 @@ const Header = ({ currentUser }) => {
   );
 };
 
-export default Header;
+const mapStateToProps=(state)=>({
+  currentUser:state.user.currentUser
+})
+
+export default connect(mapStateToProps)(Header);
