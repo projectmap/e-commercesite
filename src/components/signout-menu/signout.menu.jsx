@@ -9,6 +9,8 @@ import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import "./signout-menu.styles.scss";
 
+import {connect} from "react-redux";
+
 const useStyles = makeStyles({
   root: {
     maxWidth: 345,
@@ -84,4 +86,10 @@ const ImgMediaCard = ({ currentUser, handle }) => {
   );
 };
 
-export default ImgMediaCard;
+
+
+const mapStateToProps=(state)=>({
+  currentUser:state.user.currentUser
+})
+
+export default connect(mapStateToProps)(ImgMediaCard);

@@ -36,13 +36,13 @@ const AlertSuccess=({openAlertBar,openBar})=>{
           horizontal: 'left',
         }}
         open={open}
-        autoHideDuration={6000}
+        autoHideDuration={5000}
         onClose={handleClose}
         message="You are logged in."
         action={
           <React.Fragment>
             <Button color="secondary" size="small" onClick={handleClose}>
-              Close
+            &#10006;
             </Button>
             <IconButton size="small" aria-label="close" color="inherit" onClick={handleClose}>
               {/* <CloseIcon fontSize="small" /> */}
