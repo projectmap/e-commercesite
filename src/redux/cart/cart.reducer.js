@@ -1,23 +1,30 @@
 import { cartActionTypes } from "./cart.types"
+import { addItemToCart } from "./cart.utils";
 
-
-const INITIAL_STATE={
-    toggleState:false
+const INITIAL_STATE2={
+    toggleState:false,
+    cartItems:[]
 }
 
 
- const cartReducer=(state=INITIAL_STATE,action)=>{
+ const cartReducer=(state=INITIAL_STATE2,action)=>{
     switch(action.type){
-        case "SET_TOGGLE":
+        case cartActionTypes.SET_TOGGLE:
             return{
-               
+               ...state,
                 toggleState:!state.toggleState
             }
 
-            default:
+            case cartActionTypes.ADD_ITEMS:
                 return{
-                    state
+                    ...state,
+                    cartItems:addItemToCart(state.cartItems,action.payload)
+
                 }
+
+            default:
+                return state
+                
     }
 }
 

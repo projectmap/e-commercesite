@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 
 import {connect} from "react-redux";
 
-
+import {ReactComponent as ShoppingCart} from "../../assets/shop-cart.svg";
 
 
 import CartIcon from "../cart-icon/cart-icon.component";
@@ -16,12 +16,18 @@ import { ReactComponent as Logo } from "../../assets/crownlogo.svg";
 import "./header.styles.scss";
 import ImgMediaCard from "../signout-menu/signout.menu";
 
-const Header = ({ currentUser,setToggleMenu,dropDownStatus }) => {
+const Header = ({ currentUser,setToggleMenu,dropDownStatus,toggle }) => {
+
+  
   //console.log('current user photo', currentUser.multiFactor?.photoURL)
-console.log("cart reducer",dropDownStatus,currentUser)
+console.log("cart reducer",dropDownStatus,toggle,currentUser)
   const [status, setStatus] = useState("hide");
   const [cardHide1, setCardHide1] = useState("arrow-signout");
   const [cardHide2, setCardHide2] = useState("arrow-signout-hide");
+  const [cartMenuStatus, setCartMenu] = useState({
+    status:false,
+    cartItems:[]
+  });
 
   const handleSignOut = () => {
     setStatus("hide");
@@ -91,9 +97,24 @@ console.log("cart reducer",dropDownStatus,currentUser)
             </Link>
           )}
         </div>
-        <CartIcon />
+        <CartIcon  />
+
+        {/* <div className="cart-icon" onClick={()=>{setCartMenu((prev)=>({
+...prev,
+status:!prev.status
+        }))}}>
+            <ShoppingCart className="shopping-icon"/>
+
+            <span className="item-count">0</span>
+        </div> */}
       </div>
       {dropDownStatus?<CartDropdown/>:null}
+
+
+{/* 
+      <div className={cartMenu} onClick={()=>{setCartMenu("hide")}}>
+      
+      </div> */}
     </div>
   );
 };
