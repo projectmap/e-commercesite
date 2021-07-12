@@ -2,17 +2,23 @@ import React, { useEffect, useState } from "react";
 
 import { auth } from "../../firebase/firebase.utils";
 
+
+import CartDropdown from "../cart-dropdown/cart-dropdown.component";
 import { Link } from "react-router-dom";
 
 import {connect} from "react-redux";
 
+
+
+
+import CartIcon from "../cart-icon/cart-icon.component";
 import { ReactComponent as Logo } from "../../assets/crownlogo.svg";
 import "./header.styles.scss";
 import ImgMediaCard from "../signout-menu/signout.menu";
 
-const Header = ({ currentUser }) => {
+const Header = ({ currentUser,setToggleMenu,dropDownStatus }) => {
   //console.log('current user photo', currentUser.multiFactor?.photoURL)
-
+console.log("cart reducer",dropDownStatus,currentUser)
   const [status, setStatus] = useState("hide");
   const [cardHide1, setCardHide1] = useState("arrow-signout");
   const [cardHide2, setCardHide2] = useState("arrow-signout-hide");
@@ -85,13 +91,18 @@ const Header = ({ currentUser }) => {
             </Link>
           )}
         </div>
+        <CartIcon />
       </div>
+      {dropDownStatus?<CartDropdown/>:null}
     </div>
   );
 };
 
+
+
 const mapStateToProps=(state)=>({
-  currentUser:state.user.currentUser
+  currentUser:state.user.currentUser,
+   dropDownStatus:state.cart.toggleState
 })
 
-export default connect(mapStateToProps)(Header);
+export default connect(mapStateToProps,null)(Header);
