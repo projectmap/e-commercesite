@@ -12,6 +12,7 @@ import Header from './components/header/header.component';
 import HomePage from './pages/homepage/homepage.component';
 import ShopPage from './pages/shop/shop.component';
 import SignInUpPage from './pages/signinup/sign-in-up';
+import { cartActionTypes } from './redux/cart/cart.types';
 
 const HatsPage = () => (
   <div>
@@ -20,7 +21,7 @@ const HatsPage = () => (
 );
 
 
-function App({setCurrentUser,currentUser}) {
+function App({setCurrentUser,currentUser,toggleValue}) {
 
   // const [currentUser,setUser]=useState(null);
   useEffect(()=>{
@@ -61,7 +62,7 @@ function App({setCurrentUser,currentUser}) {
 
   return (
     <div>
-      <Header />
+      <Header toggle={toggleValue}/>
       <Switch>
         <Route exact path='/' component={HomePage} />
         <Route path='/hats' component={HatsPage} />
@@ -72,8 +73,9 @@ function App({setCurrentUser,currentUser}) {
   );
 }
 
-const mapStateToProps=({user})=>({
-  currentUser:user.currentUser
+const mapStateToProps=({user,cart})=>({
+  currentUser:user.currentUser,
+  toggleValue:cart.toggleState
 })
 
 const mapDispatchToProps=(dispatch)=>({

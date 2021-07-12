@@ -9,7 +9,8 @@ import {ReactComponent as ShoppingCart} from "../../assets/shop-cart.svg";
 
 
 
-const CartIcon=({setHideMenu})=>{
+const CartIcon=({setHideMenu,setCartMenu})=>{
+   
     return(
         <div className="cart-icon" onClick={setHideMenu}>
             <ShoppingCart className="shopping-icon"/>

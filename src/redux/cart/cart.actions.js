@@ -6,3 +6,8 @@ export const setToggleMenu=()=>({
 
     
 })
+
+export const addItem=(item)=>({
+type:cartActionTypes.ADD_ITEMS,
+payload:item
+})
