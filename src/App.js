@@ -13,6 +13,8 @@ import HomePage from './pages/homepage/homepage.component';
 import ShopPage from './pages/shop/shop.component';
 import SignInUpPage from './pages/signinup/sign-in-up';
 import { cartActionTypes } from './redux/cart/cart.types';
+import { selectCurrentUser } from './redux/user/user.selectors';
+import CheckoutPage from './pages/checkoutPage/checkout.component';
 
 const HatsPage = () => (
   <div>
@@ -68,14 +70,15 @@ function App({setCurrentUser,currentUser,toggleValue}) {
         <Route path='/hats' component={HatsPage} />
         <Route path='/shop' component={ShopPage} />
         <Route exact path='/signin' render={()=>currentUser? (<Redirect to="/"/>):<SignInUpPage/>} />
+      <Route exact path="/checkout" component={CheckoutPage}/>
       </Switch>
     </div>
   );
 }
 
-const mapStateToProps=({user,cart})=>({
-  currentUser:user.currentUser,
-  toggleValue:cart.toggleState
+const mapStateToProps=(state)=>({
+  currentUser:selectCurrentUser(state),
+  toggleValue:state.cart.toggleState
 })
 
 const mapDispatchToProps=(dispatch)=>({
