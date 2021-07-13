@@ -15,6 +15,7 @@ import CartIcon from "../cart-icon/cart-icon.component";
 import { ReactComponent as Logo } from "../../assets/crownlogo.svg";
 import "./header.styles.scss";
 import ImgMediaCard from "../signout-menu/signout.menu";
+import { selectCurrentUser } from "../../redux/user/user.selectors";
 
 const Header = ({ currentUser,setToggleMenu,dropDownStatus,toggle }) => {
 
@@ -122,7 +123,7 @@ status:!prev.status
 
 
 const mapStateToProps=(state)=>({
-  currentUser:state.user.currentUser,
+  currentUser:selectCurrentUser(state),
    dropDownStatus:state.cart.toggleState
 })
 
