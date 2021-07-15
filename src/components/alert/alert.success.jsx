@@ -2,10 +2,10 @@ import React from 'react';
 import Button from '@material-ui/core/Button';
 import Snackbar from '@material-ui/core/Snackbar';
 import IconButton from '@material-ui/core/IconButton';
-//import CloseIcon from '@material-ui/icons/Close';
+// import CloseIcon from '@material-ui/icons/Close';
 
-const AlertSuccess=({openAlertBar,openBar})=>{
-
+const AlertSuccess=({openAlertBar,openBar,message})=>{
+const messageText=message?message:"You are logged in."
     React.useEffect(()=>{
         if(openAlertBar){
             setOpen(true);
@@ -23,7 +23,7 @@ const AlertSuccess=({openAlertBar,openBar})=>{
       if (reason === 'clickaway') {
         return;
       }
-      openBar(false);
+      //openBar(false);
   
       setOpen(false);
     };
@@ -38,11 +38,11 @@ const AlertSuccess=({openAlertBar,openBar})=>{
         open={open}
         autoHideDuration={5000}
         onClose={handleClose}
-        message="You are logged in."
+        message={messageText}
         action={
           <React.Fragment>
             <Button color="secondary" size="small" onClick={handleClose}>
-            &#10006;
+           
             </Button>
             <IconButton size="small" aria-label="close" color="inherit" onClick={handleClose}>
               {/* <CloseIcon fontSize="small" /> */}

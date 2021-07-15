@@ -1,6 +1,7 @@
 .category-page {
     display: flex;
     flex-direction: column;
+    align-items: center;
   
     .title {
       font-size: 38px;
@@ -8,12 +9,17 @@
     }
   
     .items {
+      display: flex;
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr;
       grid-gap: 10px;
+
+
+      
   
       & .collection-item {
         margin-bottom: 30px;
+       
       }
     }
   }
