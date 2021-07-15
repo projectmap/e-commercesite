@@ -1,6 +1,7 @@
 .collection-preview {
    
     display: flex;
+   
     flex-direction: column;
     margin-bottom: 30px;
   
@@ -11,6 +12,25 @@
   
     .preview {
       display: flex;
+      flex-wrap: wrap;
+     
+      // @media (max-width:1000px){
+      //   padding-left: 90px;
+      //   padding-right: 90px;
+      // }
+      @media (max-width:960px){
+        // padding-left: 20px;
+        // padding-right: 20px;
+      }
+      @media (max-width:780px){
+        padding-left: 10px;
+        padding-right: 10px;
+        justify-content: space-around;
+      }
+       @media (max-width:560px){
+        padding:0;
+        justify-content: center;
+      }
       justify-content: space-between;
     }
   }

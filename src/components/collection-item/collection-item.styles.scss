@@ -1,6 +1,21 @@
 .collection-item {
    
     width: 22%;
+    // @media (max-width:900px){
+      
+    // min-width: 230px;
+    // max-width: 230px;
+    // margin-right: 10px;
+     
+    // }
+    // @media (max-width:900px){
+    //   width: 30%;
+     
+    // }
+    min-width: 230px;
+    max-width: 230px;
+    margin-right: 10px;
+    
     display: flex;
     flex-direction: column;
     height: 350px;
