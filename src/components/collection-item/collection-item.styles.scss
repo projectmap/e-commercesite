@@ -1,59 +1,81 @@
 .collection-item {
-   
-    width: 22%;
-    // @media (max-width:900px){
-      
-    // min-width: 230px;
-    // max-width: 230px;
-    // margin-right: 10px;
-     
-    // }
-    // @media (max-width:900px){
-    //   width: 30%;
-     
-    // }
-    min-width: 230px;
-    max-width: 230px;
-    margin-right: 10px;
-    
-    display: flex;
-    flex-direction: column;
-    height: 350px;
-    align-items: center;
-    position: relative;
-  
-    .image {
-      width: 100%;
-      height: 95%;
-      background-size: cover;
-      background-position: center;
-      margin-bottom: 5px;
-    }
-  
-    .collection-footer {
-      width: 100%;
-      height: 5%;
-      display: flex;
-      justify-content: space-between;
-      font-size: 18px;
-  
-      .name {
-        width: 90%;
-        margin-bottom: 15px;
-      }
-  
-      .price {
-        width: 10%;
-      }
-    }
+  //width: 22%;
+  width: 250px;
+  // @media (max-width:900px){
+
+  // min-width: 230px;
+  // max-width: 230px;
+  // margin-right: 10px;
+
+  // }
+  // @media (max-width:900px){
+  //   width: 30%;
+
+  // }
+  min-width: 230px;
+  //max-width: 430px;
+  margin-right: 10px;
+
+  display: flex;
+  flex-direction: column;
+  height: 350px;
+  @media (min-width: 1300px) {
+    height: 500px;
+    width: 300px;
   }
 
-  .checkout-button{
-    position: absolute;
-    bottom: 80px;
-    opacity: 0.4;
-    background-color: black;
+  @media (min-width: 1400px) {
+    height: 550px;
+    width: 320px;
   }
-  .checkout-button:hover{
-    opacity: 0.8;
+  @media (min-width: 1900px) {
+    height: 550px;
+    width: 400px;
   }
+  //height: 100%;
+  align-items: center;
+  position: relative;
+
+  .image {
+    width: 100%;
+    height: 95%;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 5px;
+  }
+
+  .collection-footer {
+    width: 100%;
+    height: 5%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+
+    .name {
+      width: 90%;
+      margin-bottom: 15px;
+      @media (max-width: 600px) {
+        font-size: 16px;
+      }
+    }
+
+    .price {
+      width: 10%;
+    }
+  }
+}
+
+.checkout-button {
+  position: absolute;
+  bottom: 80px;
+  opacity: 0.4;
+  background-color: black;
+  @media (min-width: 1550px) {
+    width: 40%;
+    height: 50px;
+    bottom: 100px;
+  }
+}
+.checkout-button:hover {
+  opacity: 0.8;
+}
