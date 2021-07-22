@@ -1,0 +1,11 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <filter id="svg_1_blur">
+   <feGaussianBlur stdDeviation="0.5" in="SourceGraphic"/>
+  </filter>
+ </defs>
+ <g>
+  <title>Layer 1</title>
+  <text style="cursor: move;" stroke-dasharray="5,2,2,2,2,2" stroke-width="0" filter="url(#svg_1_blur)" font-style="normal" font-weight="normal" opacity="0.78" xml:space="preserve" text-anchor="start" font-family="'Rounded Mplus 1c Bold'" font-size="24" id="svg_1" y="295" x="377.58333" stroke="#000" fill="#444444">SNS</text>
+ </g>
+</svg>

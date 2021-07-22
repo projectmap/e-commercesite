@@ -13,6 +13,7 @@ import {ReactComponent as ShoppingCart} from "../../assets/shop-cart.svg";
 
 import CartIcon from "../cart-icon/cart-icon.component";
 import { ReactComponent as Logo } from "../../assets/crownlogo.svg";
+import { ReactComponent as Logos } from "../../assets/TEST.svg";
 import "./header.styles.scss";
 import ImgMediaCard from "../signout-menu/signout.menu";
 import { selectCurrentUser } from "../../redux/user/user.selectors";
@@ -42,7 +43,7 @@ console.log("cart reducer",dropDownStatus,toggle,currentUser)
     <div className="header">
       <div className="logo-holder">
         <Link className="home" to="/">
-          <Logo />
+          <Logos/>
         </Link>
       </div>
       <div className="option-holder">

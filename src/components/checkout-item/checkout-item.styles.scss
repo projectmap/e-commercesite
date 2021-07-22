@@ -1,16 +1,16 @@
 .checkout-item {
   width: 100%;
   //min-width: 345px;
-  @media (max-width: 700px) {
+  @media screen and(max-width: 700px) {
     width: 345px;
   }
-  @media (max-width: 360px) {
+  @media screen and(max-width: 360px) {
     width: 320px;
   }
-  @media (max-width: 330px) {
+  @media screen and(max-width: 330px) {
     width: 300px;
   }
-  @media (max-width: 310px) {
+  @media screen and(max-width: 310px) {
     width: 280px;
   }
   display: flex;
@@ -33,7 +33,7 @@
   .quantity,
   .price {
     width: 23%;
-    @media (max-width: 560px) {
+    @media screen and(max-width: 560px) {
       font-size: 14px;
     }
   }
@@ -57,7 +57,7 @@
 
 .checkout-item-container {
   width: 100%;
-  @media (max-width: 660px) {
+  @media screen and(max-width: 660px) {
     width: fit-content;
   }
 }
