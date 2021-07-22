@@ -13,10 +13,10 @@
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid darkgrey;
-    @media (max-width: 600px) {
+    @media screen and(max-width: 600px) {
       width: 310px;
     }
-    @media (max-width: 330px) {
+    @media screen and(max-width: 330px) {
       width: 290px;
     }
     .header-block {
@@ -27,10 +27,10 @@
         width: 8%;
       }
 
-      @media (max-width: 700px) {
+      @media screen and(max-width: 700px) {
         margin-right: 10px;
       }
-      @media (max-width: 340px) {
+      @media screen and(max-width: 340px) {
         margin-right: 15px;
         font-size: 14px;
       }
@@ -41,7 +41,7 @@
     margin-top: 30px;
     margin-left: auto;
     font-size: 36px;
-    @media (max-width: 600px) {
+    @media screen and(max-width: 600px) {
       font-size: 30px;
     }
   }
@@ -55,10 +55,10 @@
     margin-top: 40px;
     font-size: 24px;
     color: red;
-    @media (max-width: 600px) {
+    @media screen and(max-width: 600px) {
       font-size: 18px;
     }
-    @media (max-width: 450px) {
+    @media screen and(max-width: 450px) {
       font-size: 14px;
     }
   }
