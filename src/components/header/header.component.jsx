@@ -55,7 +55,7 @@ console.log("cart reducer",dropDownStatus,toggle,currentUser)
         </div>
         <div className="option">
           {" "}
-          <Link className="options"> CONTACT</Link>
+          <Link className="options" to="/about-us"> ABOUT-US</Link>
         </div>
         <div className="option">
           {currentUser ? (

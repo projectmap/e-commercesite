@@ -15,6 +15,7 @@ import SignInUpPage from './pages/signinup/sign-in-up';
 import { cartActionTypes } from './redux/cart/cart.types';
 import { selectCurrentUser } from './redux/user/user.selectors';
 import CheckoutPage from './pages/checkoutPage/checkout.component';
+import AboutUs from './pages/about-us/about-us.component';
 
 const HatsPage = () => (
   <div>
@@ -71,6 +72,7 @@ function App({setCurrentUser,currentUser,toggleValue}) {
         <Route path='/shop' component={ShopPage} />
         <Route exact path='/signin' render={()=>currentUser? (<Redirect to="/"/>):<SignInUpPage/>} />
       <Route exact path="/checkout" component={CheckoutPage}/>
+      <Route exact path ="/about-us" component={AboutUs}/>
       </Switch>
     </div>
   );
