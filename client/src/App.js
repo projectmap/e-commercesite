@@ -6,7 +6,7 @@ import {connect} from "react-redux";
 import { setCurrentUser } from './redux/user/user.actions';
 import {auth, createUserProfileDocument } from "./firebase/firebase.utils";
 
-import './App.css';
+import './App.scss';
 import Header from './components/header/header.component';
 
 import HomePage from './pages/homepage/homepage.component';
