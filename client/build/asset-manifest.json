@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/static/css/main.4a818c18.chunk.css",
+    "main.js": "/static/js/main.9031e09c.chunk.js",
+    "main.js.map": "/static/js/main.9031e09c.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.b17df835.js",
+    "runtime-main.js.map": "/static/js/runtime-main.b17df835.js.map",
+    "static/js/2.25a69911.chunk.js": "/static/js/2.25a69911.chunk.js",
+    "static/js/2.25a69911.chunk.js.map": "/static/js/2.25a69911.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.4a818c18.chunk.css.map": "/static/css/main.4a818c18.chunk.css.map",
+    "static/js/2.25a69911.chunk.js.LICENSE.txt": "/static/js/2.25a69911.chunk.js.LICENSE.txt",
+    "static/media/TEST.50eda536.svg": "/static/media/TEST.50eda536.svg",
+    "static/media/crownlogo.3a4e2b15.svg": "/static/media/crownlogo.3a4e2b15.svg",
+    "static/media/shop-cart.415f9b21.svg": "/static/media/shop-cart.415f9b21.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b17df835.js",
+    "static/js/2.25a69911.chunk.js",
+    "static/css/main.4a818c18.chunk.css",
+    "static/js/main.9031e09c.chunk.js"
+  ]
+}
