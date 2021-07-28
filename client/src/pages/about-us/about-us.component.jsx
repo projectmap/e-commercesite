@@ -8,7 +8,11 @@ import "./about-us.styles.scss";
 
 const AboutUs=()=>{
     return(
-        <div className="about-us"><he className="about-us-header">ABOUT US</he>
+        <div className="about-us">
+            <div className="about-heading">
+
+            <he className="about-us-header">ABOUT US</he>
+            </div>
         <div className="about-content">
             <div className="about-para">
                 <h3 className="about-title">Our mission</h3>

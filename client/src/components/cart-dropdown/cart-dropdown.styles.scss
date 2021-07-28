@@ -1,3 +1,13 @@
+/* Hide scrollbar for Chrome, Safari and Opera */
+.cart-items::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.cart-items {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
 .cart-dropdown {
   position: absolute;
   width: 200px;
