@@ -16,7 +16,7 @@ const AboutUs=()=>{
         <div className="about-content">
             <div className="about-para">
                 <h3 className="about-title">Our mission</h3>
-                <p className="gaf">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id debitis iste odio sunt repudiandae modi officiis nequeadipisicing elit. Id debitis adipisicing elit.adipisicing elit. Id debitis iste odio sunt repudiandae modi officiis neque Id debitis iste odio sunt repudiandae modi officiis nequeiste odio sunt repudiandae modi officiis neque sed perspiciatis eligendi corporis, earum, deserunt fuga? Vitae asperiores animi inventore aspernatur fuga?</p>
+                <p className="gaf">This is a test mission for test purpose?</p>
             </div>
             <div className="about-para">
                 <h3 className="about-title">Our essence</h3>
